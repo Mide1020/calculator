@@ -7,12 +7,17 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!--------display section------------->
+  <!-------main container-->
   <div class="calculator">
+    <!-------Display and history toggle container-->
     <input type="text" id="display"/>
-
-<!--------buttons------------->
-    <div class="buttons">
+    
+    <div class="history-toggle" id="toggleHistory">
+      <div>🕘</div>
+      <span class="history-count" id="historyCount"></span>
+    </div>
+    <!------button and operator container------>
+    <div class="buttons" id="buttonsContainer">
       <button>1</button>
       <button>2</button>
       <button>3</button>
@@ -34,18 +39,20 @@
       <button>.</button>
       <button>0</button>
       <button>⌫</button>
-  
       <button class="equal-to">=</button>
-      <button>←</button>
       <button>C</button>
-      <div>
-      <button class="history-button" id="toggleHistory">🕘</button>
-    <div class="history" id="history"></div>
-  </div>
-    
+    </div>
+       <!------calculation history container------>
+    <div class="history-panel" id="historyPanel">
+      <div class="history-header">
+        <button class="backtick-button" id="backtickButton">←</button>
+        <span>History</span>
+        <button class="clear-history" id="clearHistory">Clear All</button>
+      </div>
+      <div class="history-content" id="historyContent">
+        <div class="no-history">Empty</div>
       </div>
     </div>
-    
   </div>
 
   <script src="script.js"></script>
